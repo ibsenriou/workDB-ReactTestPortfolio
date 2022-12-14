@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WorkDb React Test Portfolio
 
-## Getting Started
+### Developed by: Ibsen Gabriel Santos
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Resumo
+Buscando atender o objetivo proposto, foi desenvolvida uma aplicação React 
+utilizando o framework NextJS e Typescript com Deploy na Vercel.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Funcionalidades
+A aplicação contém as seguintes funcionalidades: 
+### Formulário e Form Controll
+Um formulário para cadastro de novos usuários, com validação de dados e tratamento de erros sendo realizados  pelas bibliotecas
+_react-hook-form_ e _YUP_.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Tabela
+Uma tabela construída utilizando o componente _mui/x-data-grid_ com funcionalidades adicionais de ordenar resultados por ordem crescente ou decrescente e paginação no seu rodapé.
+Contém também no seu cabeçalho um filtro para buscar usuário por nome ou sobrenome, e dois botões, sendo um para exportar todos os dados do estado atual para uma nova aba do navegador em formato JSON e um que irá efetuar a exclusão de todos os dados constantes no estado atual.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Estilização
+Para a estilização foi utilizada a biblioteca de componentes MUI Material que conta com alguns componentes já pré-construídos.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Principais Bibliotecas de Terceiros / Dependências
 
-## Learn More
+1. Mui Material
+2. Mui Material Icons
+3. Mui X Datagrid
+4. React Hook Form
+5. Yup
+6. UUID
+7. Date-Fns
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Considerações Finais e Observações
+Para conclusão do objetivo proposto, foi utilizado um pouco de "Prop Drilling". 
+Levando em conta o princípio de YAGNI (You ain't gonna need it) já que
+o código atende completamente o objetivo proposto, o mesmo fora mantido na forma como se encontra atualmente. Todavia, cabe a ele diversas refatorações, sendo, a principal, uma melhor arquitetura dos pacotes e módulos que abarcam os componentes e a implementação de um contexto para controle global do estado da Tabela na aplicação.
